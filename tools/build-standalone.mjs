@@ -11,6 +11,7 @@ const uri = (rel) => {
 let css = fs.readFileSync(path.join(root,'assets/css/styles.css'),'utf8')
   .replace(/url\("\.\.\/(fonts\/[^"]+)"\)/g, (_, p) => `url("${uri('assets/'+p)}")`);
 let js = fs.readFileSync(path.join(root,'assets/js/main.js'),'utf8');
+js = js.replace(/\/\*SW\*\/[\s\S]*?\/\*ENDSW\*\//, ''); // no service worker in the single-file build
 let html = fs.readFileSync(path.join(root,'index.html'),'utf8');
 
 // the lightbox builds "<base>.webp/.jpg" at runtime: ship a lookup instead of file paths

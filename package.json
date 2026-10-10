@@ -1,0 +1,13 @@
+{
+  "name": "punarjan-growth-plan",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Interview presentation site. No runtime dependencies.",
+  "scripts": {
+    "bundle": "node tools/build-standalone.mjs",
+    "preflight": "node tools/build-standalone.mjs && node tools/preflight.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

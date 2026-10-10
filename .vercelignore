@@ -1,0 +1,9 @@
+# Not part of the public site: speaker notes, tooling, review screenshots, source images
+speaker
+tools
+screenshots
+node_modules
+package.json
+package-lock.json
+assets/img/source
+README.md
